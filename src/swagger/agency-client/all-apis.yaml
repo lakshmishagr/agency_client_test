@@ -1,0 +1,1984 @@
+openapi: 3.0.0
+info:
+  title: Agency_Client
+  version: 1.0.0
+servers:
+  - url: http://localhost:1337
+tags:
+  - name: Agency
+  - name: client
+paths:
+  /v1/agency:
+    get:
+      tags:
+        - Agency
+      summary: list agency
+      responses:
+        '200':
+          description: OK
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Access-Control-Allow-Credentials:
+              schema:
+                type: boolean
+                example: 'true'
+            Content-Security-Policy:
+              schema:
+                type: string
+                example: >-
+                  default-src 'self';base-uri 'self';font-src 'self' https:
+                  data:;form-action 'self';frame-ancestors 'self';img-src 'self'
+                  data:;object-src 'none';script-src 'self';script-src-attr
+                  'none';style-src 'self' https:
+                  'unsafe-inline';upgrade-insecure-requests
+            Cross-Origin-Embedder-Policy:
+              schema:
+                type: string
+                example: require-corp
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Resource-Policy:
+              schema:
+                type: string
+                example: same-origin
+            X-DNS-Prefetch-Control:
+              schema:
+                type: string
+                example: 'off'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            Strict-Transport-Security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains
+            X-Download-Options:
+              schema:
+                type: string
+                example: noopen
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Origin-Agent-Cluster:
+              schema:
+                type: string
+                example: '?1'
+            X-Permitted-Cross-Domain-Policies:
+              schema:
+                type: string
+                example: none
+            Referrer-Policy:
+              schema:
+                type: string
+                example: no-referrer
+            X-XSS-Protection:
+              schema:
+                type: integer
+                example: '0'
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: GET, POST, OPTIONS, PUT, PATCH, DELETE
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: >-
+                  Origin, X-Requested-With, Content-Type, Accept, cache-control,
+                  authorization
+            Cache-control:
+              schema:
+                type: string
+                example: no-store
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '327'
+            ETag:
+              schema:
+                type: string
+                example: W/"147-S4rwh1py+Z+TVpWCCYmWBV/CfNc"
+            Vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            Date:
+              schema:
+                type: string
+                example: Tue, 26 Mar 2024 16:35:07 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                success: true
+                error: null
+                message: Agencys list fetched successfully.
+                data:
+                  - _id: 6602f8fd3348964221a600da
+                    name: Agency-1
+                    address1: Bangalore
+                    address2: ''
+                    state: karnataka
+                    city: Bangalore
+                    phoneNumber: '8722680596'
+                    createdAt: '2024-03-26T16:34:05.291Z'
+                    updatedAt: '2024-03-26T16:34:05.291Z'
+                    __v: 0
+    post:
+      tags:
+        - Agency
+      summary: create agency
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: Agency-1
+                address1: Bangalore
+                address2: ''
+                state: karnataka
+                city: Bangalore
+                phoneNumber: '8722680596'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Access-Control-Allow-Credentials:
+              schema:
+                type: boolean
+                example: 'true'
+            Content-Security-Policy:
+              schema:
+                type: string
+                example: >-
+                  default-src 'self';base-uri 'self';font-src 'self' https:
+                  data:;form-action 'self';frame-ancestors 'self';img-src 'self'
+                  data:;object-src 'none';script-src 'self';script-src-attr
+                  'none';style-src 'self' https:
+                  'unsafe-inline';upgrade-insecure-requests
+            Cross-Origin-Embedder-Policy:
+              schema:
+                type: string
+                example: require-corp
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Resource-Policy:
+              schema:
+                type: string
+                example: same-origin
+            X-DNS-Prefetch-Control:
+              schema:
+                type: string
+                example: 'off'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            Strict-Transport-Security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains
+            X-Download-Options:
+              schema:
+                type: string
+                example: noopen
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Origin-Agent-Cluster:
+              schema:
+                type: string
+                example: '?1'
+            X-Permitted-Cross-Domain-Policies:
+              schema:
+                type: string
+                example: none
+            Referrer-Policy:
+              schema:
+                type: string
+                example: no-referrer
+            X-XSS-Protection:
+              schema:
+                type: integer
+                example: '0'
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: GET, POST, OPTIONS, PUT, PATCH, DELETE
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: >-
+                  Origin, X-Requested-With, Content-Type, Accept, cache-control,
+                  authorization
+            Cache-control:
+              schema:
+                type: string
+                example: no-store
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '319'
+            ETag:
+              schema:
+                type: string
+                example: W/"13f-X/rc11t8RqKHocFpyJAcBKAlwvU"
+            Vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            Date:
+              schema:
+                type: string
+                example: Tue, 26 Mar 2024 16:34:05 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                success: true
+                error: null
+                message: Agency created successfully.
+                data:
+                  name: Agency-1
+                  address1: Bangalore
+                  address2: ''
+                  state: karnataka
+                  city: Bangalore
+                  phoneNumber: '8722680596'
+                  _id: 6602f8fd3348964221a600da
+                  createdAt: '2024-03-26T16:34:05.291Z'
+                  updatedAt: '2024-03-26T16:34:05.291Z'
+                  __v: 0
+        '422':
+          description: Unprocessable Entity
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Access-Control-Allow-Credentials:
+              schema:
+                type: boolean
+                example: 'true'
+            Content-Security-Policy:
+              schema:
+                type: string
+                example: >-
+                  default-src 'self';base-uri 'self';font-src 'self' https:
+                  data:;form-action 'self';frame-ancestors 'self';img-src 'self'
+                  data:;object-src 'none';script-src 'self';script-src-attr
+                  'none';style-src 'self' https:
+                  'unsafe-inline';upgrade-insecure-requests
+            Cross-Origin-Embedder-Policy:
+              schema:
+                type: string
+                example: require-corp
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Resource-Policy:
+              schema:
+                type: string
+                example: same-origin
+            X-DNS-Prefetch-Control:
+              schema:
+                type: string
+                example: 'off'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            Strict-Transport-Security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains
+            X-Download-Options:
+              schema:
+                type: string
+                example: noopen
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Origin-Agent-Cluster:
+              schema:
+                type: string
+                example: '?1'
+            X-Permitted-Cross-Domain-Policies:
+              schema:
+                type: string
+                example: none
+            Referrer-Policy:
+              schema:
+                type: string
+                example: no-referrer
+            X-XSS-Protection:
+              schema:
+                type: integer
+                example: '0'
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: GET, POST, OPTIONS, PUT, PATCH, DELETE
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: >-
+                  Origin, X-Requested-With, Content-Type, Accept, cache-control,
+                  authorization
+            Cache-control:
+              schema:
+                type: string
+                example: no-store
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '166'
+            ETag:
+              schema:
+                type: string
+                example: W/"a6-qAyNrpTgI9rsuxSMlklO7k3b1WY"
+            Vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            Date:
+              schema:
+                type: string
+                example: Tue, 26 Mar 2024 16:34:35 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                success: false
+                message: Unprocessable entity
+                data: null
+                error: null
+                errorMessage: Unprocessable entity
+                errorStack: 'ValidationError: "name" is required'
+  /v1/agency/{id}:
+    get:
+      tags:
+        - Agency
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: number
+            required: true
+            description: id value
+      summary: Get Agency
+      responses:
+        '200':
+          description: OK
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Access-Control-Allow-Credentials:
+              schema:
+                type: boolean
+                example: 'true'
+            Content-Security-Policy:
+              schema:
+                type: string
+                example: >-
+                  default-src 'self';base-uri 'self';font-src 'self' https:
+                  data:;form-action 'self';frame-ancestors 'self';img-src 'self'
+                  data:;object-src 'none';script-src 'self';script-src-attr
+                  'none';style-src 'self' https:
+                  'unsafe-inline';upgrade-insecure-requests
+            Cross-Origin-Embedder-Policy:
+              schema:
+                type: string
+                example: require-corp
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Resource-Policy:
+              schema:
+                type: string
+                example: same-origin
+            X-DNS-Prefetch-Control:
+              schema:
+                type: string
+                example: 'off'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            Strict-Transport-Security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains
+            X-Download-Options:
+              schema:
+                type: string
+                example: noopen
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Origin-Agent-Cluster:
+              schema:
+                type: string
+                example: '?1'
+            X-Permitted-Cross-Domain-Policies:
+              schema:
+                type: string
+                example: none
+            Referrer-Policy:
+              schema:
+                type: string
+                example: no-referrer
+            X-XSS-Protection:
+              schema:
+                type: integer
+                example: '0'
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: GET, POST, OPTIONS, PUT, PATCH, DELETE
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: >-
+                  Origin, X-Requested-With, Content-Type, Accept, cache-control,
+                  authorization
+            Cache-control:
+              schema:
+                type: string
+                example: no-store
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '319'
+            ETag:
+              schema:
+                type: string
+                example: W/"13f-mm7RmiW236gxNNIYGKQu0zHKJS0"
+            Vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            Date:
+              schema:
+                type: string
+                example: Tue, 26 Mar 2024 16:35:25 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                success: true
+                error: null
+                message: Agency fetched successfully.
+                data:
+                  _id: 6602f8fd3348964221a600da
+                  name: Agency-1
+                  address1: Bangalore
+                  address2: ''
+                  state: karnataka
+                  city: Bangalore
+                  phoneNumber: '8722680596'
+                  createdAt: '2024-03-26T16:34:05.291Z'
+                  updatedAt: '2024-03-26T16:34:05.291Z'
+                  __v: 0
+    put:
+      tags:
+        - Agency
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: number
+            required: true
+            description: id value
+      summary: update-agency
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: Agency-new1
+                address1: Bangalore
+                address2: ''
+                state: karnataka
+                city: Bangalore
+                phoneNumber: '8722680596'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Access-Control-Allow-Credentials:
+              schema:
+                type: boolean
+                example: 'true'
+            Content-Security-Policy:
+              schema:
+                type: string
+                example: >-
+                  default-src 'self';base-uri 'self';font-src 'self' https:
+                  data:;form-action 'self';frame-ancestors 'self';img-src 'self'
+                  data:;object-src 'none';script-src 'self';script-src-attr
+                  'none';style-src 'self' https:
+                  'unsafe-inline';upgrade-insecure-requests
+            Cross-Origin-Embedder-Policy:
+              schema:
+                type: string
+                example: require-corp
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Resource-Policy:
+              schema:
+                type: string
+                example: same-origin
+            X-DNS-Prefetch-Control:
+              schema:
+                type: string
+                example: 'off'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            Strict-Transport-Security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains
+            X-Download-Options:
+              schema:
+                type: string
+                example: noopen
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Origin-Agent-Cluster:
+              schema:
+                type: string
+                example: '?1'
+            X-Permitted-Cross-Domain-Policies:
+              schema:
+                type: string
+                example: none
+            Referrer-Policy:
+              schema:
+                type: string
+                example: no-referrer
+            X-XSS-Protection:
+              schema:
+                type: integer
+                example: '0'
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: GET, POST, OPTIONS, PUT, PATCH, DELETE
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: >-
+                  Origin, X-Requested-With, Content-Type, Accept, cache-control,
+                  authorization
+            Cache-control:
+              schema:
+                type: string
+                example: no-store
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '322'
+            ETag:
+              schema:
+                type: string
+                example: W/"142-IJESKJmy3hcEnUx7CKI5QZ6ypns"
+            Vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            Date:
+              schema:
+                type: string
+                example: Tue, 26 Mar 2024 16:49:55 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                success: true
+                error: null
+                message: Agency updated successfully.
+                data:
+                  _id: 6602f8fd3348964221a600da
+                  name: Agency-new1
+                  address1: Bangalore
+                  address2: ''
+                  state: karnataka
+                  city: Bangalore
+                  phoneNumber: '8722680596'
+                  createdAt: '2024-03-26T16:34:05.291Z'
+                  updatedAt: '2024-03-26T16:49:55.543Z'
+                  __v: 0
+    delete:
+      tags:
+        - Agency
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: number
+            required: true
+            description: id value
+      summary: delete agency
+      responses:
+        '200':
+          description: OK
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Access-Control-Allow-Credentials:
+              schema:
+                type: boolean
+                example: 'true'
+            Content-Security-Policy:
+              schema:
+                type: string
+                example: >-
+                  default-src 'self';base-uri 'self';font-src 'self' https:
+                  data:;form-action 'self';frame-ancestors 'self';img-src 'self'
+                  data:;object-src 'none';script-src 'self';script-src-attr
+                  'none';style-src 'self' https:
+                  'unsafe-inline';upgrade-insecure-requests
+            Cross-Origin-Embedder-Policy:
+              schema:
+                type: string
+                example: require-corp
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Resource-Policy:
+              schema:
+                type: string
+                example: same-origin
+            X-DNS-Prefetch-Control:
+              schema:
+                type: string
+                example: 'off'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            Strict-Transport-Security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains
+            X-Download-Options:
+              schema:
+                type: string
+                example: noopen
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Origin-Agent-Cluster:
+              schema:
+                type: string
+                example: '?1'
+            X-Permitted-Cross-Domain-Policies:
+              schema:
+                type: string
+                example: none
+            Referrer-Policy:
+              schema:
+                type: string
+                example: no-referrer
+            X-XSS-Protection:
+              schema:
+                type: integer
+                example: '0'
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: GET, POST, OPTIONS, PUT, PATCH, DELETE
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: >-
+                  Origin, X-Requested-With, Content-Type, Accept, cache-control,
+                  authorization
+            Cache-control:
+              schema:
+                type: string
+                example: no-store
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '321'
+            ETag:
+              schema:
+                type: string
+                example: W/"141-7UxSxjj1ZscIw2ez3Ei71aYaP9Q"
+            Vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            Date:
+              schema:
+                type: string
+                example: Tue, 26 Mar 2024 16:51:22 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                success: true
+                error: null
+                message: Agency delete successfully.
+                data:
+                  _id: 6602f8fd3348964221a600da
+                  name: Agency-new1
+                  address1: Bangalore
+                  address2: ''
+                  state: karnataka
+                  city: Bangalore
+                  phoneNumber: '8722680596'
+                  createdAt: '2024-03-26T16:34:05.291Z'
+                  updatedAt: '2024-03-26T16:49:55.543Z'
+                  __v: 0
+  /v1/client:
+    get:
+      tags:
+        - client
+      summary: list clients
+      responses:
+        '200':
+          description: OK
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Access-Control-Allow-Credentials:
+              schema:
+                type: boolean
+                example: 'true'
+            Content-Security-Policy:
+              schema:
+                type: string
+                example: >-
+                  default-src 'self';base-uri 'self';font-src 'self' https:
+                  data:;form-action 'self';frame-ancestors 'self';img-src 'self'
+                  data:;object-src 'none';script-src 'self';script-src-attr
+                  'none';style-src 'self' https:
+                  'unsafe-inline';upgrade-insecure-requests
+            Cross-Origin-Embedder-Policy:
+              schema:
+                type: string
+                example: require-corp
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Resource-Policy:
+              schema:
+                type: string
+                example: same-origin
+            X-DNS-Prefetch-Control:
+              schema:
+                type: string
+                example: 'off'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            Strict-Transport-Security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains
+            X-Download-Options:
+              schema:
+                type: string
+                example: noopen
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Origin-Agent-Cluster:
+              schema:
+                type: string
+                example: '?1'
+            X-Permitted-Cross-Domain-Policies:
+              schema:
+                type: string
+                example: none
+            Referrer-Policy:
+              schema:
+                type: string
+                example: no-referrer
+            X-XSS-Protection:
+              schema:
+                type: integer
+                example: '0'
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: GET, POST, OPTIONS, PUT, PATCH, DELETE
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: >-
+                  Origin, X-Requested-With, Content-Type, Accept, cache-control,
+                  authorization
+            Cache-control:
+              schema:
+                type: string
+                example: no-store
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '332'
+            ETag:
+              schema:
+                type: string
+                example: W/"14c-7pd44WZJjno/83iesv2LixfPb0Y"
+            Vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            Date:
+              schema:
+                type: string
+                example: Tue, 26 Mar 2024 17:54:50 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                success: true
+                error: null
+                message: Clients list fetched successfully.
+                data:
+                  - _id: 66030bdb1ffdc8093af321f2
+                    agencyId: 6602fd4c1ffdc8093af321ea
+                    name: Agency-new1
+                    email: abc@gmail.com
+                    phoneNumber: '8722680596'
+                    totalBill: 100
+                    createdAt: '2024-03-26T17:54:35.977Z'
+                    updatedAt: '2024-03-26T17:54:35.977Z'
+                    __v: 0
+    post:
+      tags:
+        - client
+      summary: create client
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: client2
+                email: abc1@gmail.com
+                phoneNumber: '8722680596'
+                totalBill: 50
+                agencyId: 6602fd4c1ffdc8093af321ea
+      responses:
+        '200':
+          description: OK
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Access-Control-Allow-Credentials:
+              schema:
+                type: boolean
+                example: 'true'
+            Content-Security-Policy:
+              schema:
+                type: string
+                example: >-
+                  default-src 'self';base-uri 'self';font-src 'self' https:
+                  data:;form-action 'self';frame-ancestors 'self';img-src 'self'
+                  data:;object-src 'none';script-src 'self';script-src-attr
+                  'none';style-src 'self' https:
+                  'unsafe-inline';upgrade-insecure-requests
+            Cross-Origin-Embedder-Policy:
+              schema:
+                type: string
+                example: require-corp
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Resource-Policy:
+              schema:
+                type: string
+                example: same-origin
+            X-DNS-Prefetch-Control:
+              schema:
+                type: string
+                example: 'off'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            Strict-Transport-Security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains
+            X-Download-Options:
+              schema:
+                type: string
+                example: noopen
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Origin-Agent-Cluster:
+              schema:
+                type: string
+                example: '?1'
+            X-Permitted-Cross-Domain-Policies:
+              schema:
+                type: string
+                example: none
+            Referrer-Policy:
+              schema:
+                type: string
+                example: no-referrer
+            X-XSS-Protection:
+              schema:
+                type: integer
+                example: '0'
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: GET, POST, OPTIONS, PUT, PATCH, DELETE
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: >-
+                  Origin, X-Requested-With, Content-Type, Accept, cache-control,
+                  authorization
+            Cache-control:
+              schema:
+                type: string
+                example: no-store
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '324'
+            ETag:
+              schema:
+                type: string
+                example: W/"144-MyVLVEo9rmWm5KgJXD7Tr+n5dus"
+            Vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            Date:
+              schema:
+                type: string
+                example: Tue, 26 Mar 2024 17:54:35 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                success: true
+                error: null
+                message: Client created successfully.
+                data:
+                  agencyId: 6602fd4c1ffdc8093af321ea
+                  name: Agency-new1
+                  email: abc@gmail.com
+                  phoneNumber: '8722680596'
+                  totalBill: 100
+                  _id: 66030bdb1ffdc8093af321f2
+                  createdAt: '2024-03-26T17:54:35.977Z'
+                  updatedAt: '2024-03-26T17:54:35.977Z'
+                  __v: 0
+  /v1/client/fetch/getHightBillClient:
+    get:
+      tags:
+        - client
+      summary: Highest client bill
+      responses:
+        '200':
+          description: OK
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Access-Control-Allow-Credentials:
+              schema:
+                type: boolean
+                example: 'true'
+            Content-Security-Policy:
+              schema:
+                type: string
+                example: >-
+                  default-src 'self';base-uri 'self';font-src 'self' https:
+                  data:;form-action 'self';frame-ancestors 'self';img-src 'self'
+                  data:;object-src 'none';script-src 'self';script-src-attr
+                  'none';style-src 'self' https:
+                  'unsafe-inline';upgrade-insecure-requests
+            Cross-Origin-Embedder-Policy:
+              schema:
+                type: string
+                example: require-corp
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Resource-Policy:
+              schema:
+                type: string
+                example: same-origin
+            X-DNS-Prefetch-Control:
+              schema:
+                type: string
+                example: 'off'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            Strict-Transport-Security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains
+            X-Download-Options:
+              schema:
+                type: string
+                example: noopen
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Origin-Agent-Cluster:
+              schema:
+                type: string
+                example: '?1'
+            X-Permitted-Cross-Domain-Policies:
+              schema:
+                type: string
+                example: none
+            Referrer-Policy:
+              schema:
+                type: string
+                example: no-referrer
+            X-XSS-Protection:
+              schema:
+                type: integer
+                example: '0'
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: GET, POST, OPTIONS, PUT, PATCH, DELETE
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: >-
+                  Origin, X-Requested-With, Content-Type, Accept, cache-control,
+                  authorization
+            Cache-control:
+              schema:
+                type: string
+                example: no-store
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '219'
+            ETag:
+              schema:
+                type: string
+                example: W/"db-L58WaEj0c8oi2eHgvJaORAw2/Fw"
+            Vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            Date:
+              schema:
+                type: string
+                example: Tue, 26 Mar 2024 18:12:09 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                success: true
+                error: null
+                message: Details fetched successfully.
+                data:
+                  _id: 66030c741ffdc8093af321fa
+                  agencyId:
+                    _id: 6602fd4c1ffdc8093af321ea
+                    name: Agency-1
+                  totalBill: 100
+                  clientName: client-new
+  /v1/client/{id}:
+    get:
+      tags:
+        - client
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: number
+            required: true
+            description: id value
+      summary: get client
+      responses:
+        '200':
+          description: OK
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Access-Control-Allow-Credentials:
+              schema:
+                type: boolean
+                example: 'true'
+            Content-Security-Policy:
+              schema:
+                type: string
+                example: >-
+                  default-src 'self';base-uri 'self';font-src 'self' https:
+                  data:;form-action 'self';frame-ancestors 'self';img-src 'self'
+                  data:;object-src 'none';script-src 'self';script-src-attr
+                  'none';style-src 'self' https:
+                  'unsafe-inline';upgrade-insecure-requests
+            Cross-Origin-Embedder-Policy:
+              schema:
+                type: string
+                example: require-corp
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Resource-Policy:
+              schema:
+                type: string
+                example: same-origin
+            X-DNS-Prefetch-Control:
+              schema:
+                type: string
+                example: 'off'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            Strict-Transport-Security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains
+            X-Download-Options:
+              schema:
+                type: string
+                example: noopen
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Origin-Agent-Cluster:
+              schema:
+                type: string
+                example: '?1'
+            X-Permitted-Cross-Domain-Policies:
+              schema:
+                type: string
+                example: none
+            Referrer-Policy:
+              schema:
+                type: string
+                example: no-referrer
+            X-XSS-Protection:
+              schema:
+                type: integer
+                example: '0'
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: GET, POST, OPTIONS, PUT, PATCH, DELETE
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: >-
+                  Origin, X-Requested-With, Content-Type, Accept, cache-control,
+                  authorization
+            Cache-control:
+              schema:
+                type: string
+                example: no-store
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '324'
+            ETag:
+              schema:
+                type: string
+                example: W/"144-QxVBMVD6rxWlJemadCybY7L4KZk"
+            Vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            Date:
+              schema:
+                type: string
+                example: Tue, 26 Mar 2024 17:55:29 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                success: true
+                error: null
+                message: Client fetched successfully.
+                data:
+                  _id: 66030bdb1ffdc8093af321f2
+                  agencyId: 6602fd4c1ffdc8093af321ea
+                  name: Agency-new1
+                  email: abc@gmail.com
+                  phoneNumber: '8722680596'
+                  totalBill: 100
+                  createdAt: '2024-03-26T17:54:35.977Z'
+                  updatedAt: '2024-03-26T17:54:35.977Z'
+                  __v: 0
+        '409':
+          description: Conflict
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Access-Control-Allow-Credentials:
+              schema:
+                type: boolean
+                example: 'true'
+            Content-Security-Policy:
+              schema:
+                type: string
+                example: >-
+                  default-src 'self';base-uri 'self';font-src 'self' https:
+                  data:;form-action 'self';frame-ancestors 'self';img-src 'self'
+                  data:;object-src 'none';script-src 'self';script-src-attr
+                  'none';style-src 'self' https:
+                  'unsafe-inline';upgrade-insecure-requests
+            Cross-Origin-Embedder-Policy:
+              schema:
+                type: string
+                example: require-corp
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Resource-Policy:
+              schema:
+                type: string
+                example: same-origin
+            X-DNS-Prefetch-Control:
+              schema:
+                type: string
+                example: 'off'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            Strict-Transport-Security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains
+            X-Download-Options:
+              schema:
+                type: string
+                example: noopen
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Origin-Agent-Cluster:
+              schema:
+                type: string
+                example: '?1'
+            X-Permitted-Cross-Domain-Policies:
+              schema:
+                type: string
+                example: none
+            Referrer-Policy:
+              schema:
+                type: string
+                example: no-referrer
+            X-XSS-Protection:
+              schema:
+                type: integer
+                example: '0'
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: GET, POST, OPTIONS, PUT, PATCH, DELETE
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: >-
+                  Origin, X-Requested-With, Content-Type, Accept, cache-control,
+                  authorization
+            Cache-control:
+              schema:
+                type: string
+                example: no-store
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '129'
+            ETag:
+              schema:
+                type: string
+                example: W/"81-0622miqXH55A6Fyp257p4dsLRc0"
+            Vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            Date:
+              schema:
+                type: string
+                example: Tue, 26 Mar 2024 17:55:03 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                success: false
+                message: Client doesn't exist
+                data: null
+                error: null
+                errorMessage: Client doesn't exist
+                errorStack: {}
+    delete:
+      tags:
+        - client
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: number
+            required: true
+            description: id value
+      summary: delete client
+      responses:
+        '200':
+          description: OK
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Access-Control-Allow-Credentials:
+              schema:
+                type: boolean
+                example: 'true'
+            Content-Security-Policy:
+              schema:
+                type: string
+                example: >-
+                  default-src 'self';base-uri 'self';font-src 'self' https:
+                  data:;form-action 'self';frame-ancestors 'self';img-src 'self'
+                  data:;object-src 'none';script-src 'self';script-src-attr
+                  'none';style-src 'self' https:
+                  'unsafe-inline';upgrade-insecure-requests
+            Cross-Origin-Embedder-Policy:
+              schema:
+                type: string
+                example: require-corp
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Resource-Policy:
+              schema:
+                type: string
+                example: same-origin
+            X-DNS-Prefetch-Control:
+              schema:
+                type: string
+                example: 'off'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            Strict-Transport-Security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains
+            X-Download-Options:
+              schema:
+                type: string
+                example: noopen
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Origin-Agent-Cluster:
+              schema:
+                type: string
+                example: '?1'
+            X-Permitted-Cross-Domain-Policies:
+              schema:
+                type: string
+                example: none
+            Referrer-Policy:
+              schema:
+                type: string
+                example: no-referrer
+            X-XSS-Protection:
+              schema:
+                type: integer
+                example: '0'
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: GET, POST, OPTIONS, PUT, PATCH, DELETE
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: >-
+                  Origin, X-Requested-With, Content-Type, Accept, cache-control,
+                  authorization
+            Cache-control:
+              schema:
+                type: string
+                example: no-store
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '323'
+            ETag:
+              schema:
+                type: string
+                example: W/"143-XwrgbdTJGcgk6gc8aeYobdzkqo8"
+            Vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            Date:
+              schema:
+                type: string
+                example: Tue, 26 Mar 2024 17:56:06 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                success: true
+                error: null
+                message: Client delete successfully.
+                data:
+                  _id: 66030bdb1ffdc8093af321f2
+                  agencyId: 6602fd4c1ffdc8093af321ea
+                  name: Agency-new1
+                  email: abc@gmail.com
+                  phoneNumber: '8722680596'
+                  totalBill: 100
+                  createdAt: '2024-03-26T17:54:35.977Z'
+                  updatedAt: '2024-03-26T17:54:35.977Z'
+                  __v: 0
+    put:
+      tags:
+        - client
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: number
+            required: true
+            description: id value
+      summary: update client
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: client-new
+                email: abc@gmail.com
+                phoneNumber: '8722680596'
+                totalBill: 100
+                agencyId: 6602fd4c1ffdc8093af321ea
+      responses:
+        '200':
+          description: OK
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Access-Control-Allow-Credentials:
+              schema:
+                type: boolean
+                example: 'true'
+            Content-Security-Policy:
+              schema:
+                type: string
+                example: >-
+                  default-src 'self';base-uri 'self';font-src 'self' https:
+                  data:;form-action 'self';frame-ancestors 'self';img-src 'self'
+                  data:;object-src 'none';script-src 'self';script-src-attr
+                  'none';style-src 'self' https:
+                  'unsafe-inline';upgrade-insecure-requests
+            Cross-Origin-Embedder-Policy:
+              schema:
+                type: string
+                example: require-corp
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Resource-Policy:
+              schema:
+                type: string
+                example: same-origin
+            X-DNS-Prefetch-Control:
+              schema:
+                type: string
+                example: 'off'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            Strict-Transport-Security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains
+            X-Download-Options:
+              schema:
+                type: string
+                example: noopen
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Origin-Agent-Cluster:
+              schema:
+                type: string
+                example: '?1'
+            X-Permitted-Cross-Domain-Policies:
+              schema:
+                type: string
+                example: none
+            Referrer-Policy:
+              schema:
+                type: string
+                example: no-referrer
+            X-XSS-Protection:
+              schema:
+                type: integer
+                example: '0'
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: GET, POST, OPTIONS, PUT, PATCH, DELETE
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: >-
+                  Origin, X-Requested-With, Content-Type, Accept, cache-control,
+                  authorization
+            Cache-control:
+              schema:
+                type: string
+                example: no-store
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '323'
+            ETag:
+              schema:
+                type: string
+                example: W/"143-9vcNj0WKL6RMxT7/1WS6M/aT/Xk"
+            Vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            Date:
+              schema:
+                type: string
+                example: Tue, 26 Mar 2024 17:57:51 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                success: true
+                error: null
+                message: Client updated successfully.
+                data:
+                  _id: 66030c741ffdc8093af321fa
+                  agencyId: 6602fd4c1ffdc8093af321ea
+                  name: client-new
+                  email: abc@gmail.com
+                  phoneNumber: '8722680596'
+                  totalBill: 100
+                  createdAt: '2024-03-26T17:57:08.521Z'
+                  updatedAt: '2024-03-26T17:57:51.165Z'
+                  __v: 0
+
+  /v1/client/createAgencyClient:
+    post:
+      tags:
+        - client
+      summary: createAgencyClient
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                agency:
+                  name: Agency-5
+                  address1: Bangalore
+                  address2: ''
+                  state: karnataka
+                  city: Bangalore
+                  phoneNumber: '8722680596'
+                clients:
+                  - name: Agency-new1
+                    email: abc@gmail.com
+                    phoneNumber: '8722680596'
+                    totalBill: 100
+      responses:
+        '200':
+          description: OK
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Access-Control-Allow-Credentials:
+              schema:
+                type: boolean
+                example: 'true'
+            Content-Security-Policy:
+              schema:
+                type: string
+                example: >-
+                  default-src 'self';base-uri 'self';font-src 'self' https:
+                  data:;form-action 'self';frame-ancestors 'self';img-src 'self'
+                  data:;object-src 'none';script-src 'self';script-src-attr
+                  'none';style-src 'self' https:
+                  'unsafe-inline';upgrade-insecure-requests
+            Cross-Origin-Embedder-Policy:
+              schema:
+                type: string
+                example: require-corp
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Resource-Policy:
+              schema:
+                type: string
+                example: same-origin
+            X-DNS-Prefetch-Control:
+              schema:
+                type: string
+                example: 'off'
+            X-Frame-Options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            Strict-Transport-Security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains
+            X-Download-Options:
+              schema:
+                type: string
+                example: noopen
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            Origin-Agent-Cluster:
+              schema:
+                type: string
+                example: '?1'
+            X-Permitted-Cross-Domain-Policies:
+              schema:
+                type: string
+                example: none
+            Referrer-Policy:
+              schema:
+                type: string
+                example: no-referrer
+            X-XSS-Protection:
+              schema:
+                type: integer
+                example: '0'
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: GET, POST, OPTIONS, PUT, PATCH, DELETE
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: >-
+                  Origin, X-Requested-With, Content-Type, Accept, cache-control,
+                  authorization
+            Cache-control:
+              schema:
+                type: string
+                example: no-store
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '637'
+            ETag:
+              schema:
+                type: string
+                example: W/"27d-snckQhnvedOOIvBMyYbN4lmDsSk"
+            Vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            Date:
+              schema:
+                type: string
+                example: Tue, 26 Mar 2024 18:47:32 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                success: true
+                error: null
+                message: Agency & Client created successfully.
+                data:
+                  agencyData:
+                    name: Agency-5
+                    address1: Bangalore
+                    address2: ''
+                    state: karnataka
+                    city: Bangalore
+                    phoneNumber: '8722680596'
+                    _id: 6603184408922e3ee1cd0821
+                    createdAt: '2024-03-26T18:47:32.186Z'
+                    updatedAt: '2024-03-26T18:47:32.186Z'
+                    __v: 0
+                  clientsData:
+                    - status: fulfilled
+                      value:
+                        agencyId: 6603184408922e3ee1cd0821
+                        name: Agency-new1
+                        email: abc@gmail.com
+                        phoneNumber: '8722680596'
+                        totalBill: 100
+                        _id: 6603184408922e3ee1cd0823
+                        createdAt: '2024-03-26T18:47:32.225Z'
+                        updatedAt: '2024-03-26T18:47:32.225Z'
+                        __v: 0
+  
