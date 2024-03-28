@@ -21,6 +21,10 @@ class SwaggerRouter implements Routes {
     },
     servers: [
       {
+        url: `https://agency-client-test.onrender.com/`,
+        description: 'Deployed Server'
+      },
+      {
         url: `http://localhost:${PORT}/api/`,
         description: 'Local Server'
       }
